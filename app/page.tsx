@@ -33,7 +33,7 @@ export default function Home() {
         </ul>
         <div className="mt-6">
           <Link
-            href="/posts"
+            href="/blog"
             className="text-blue-600 font-medium hover:underline"
           >
             View all posts →
