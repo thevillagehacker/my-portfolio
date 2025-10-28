@@ -1,4 +1,4 @@
-    "use client";
+"use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -7,7 +7,7 @@ export default function Navbar() {
 
   const links = [
     { href: "/", label: "Home" },
-    { href: "/posts", label: "Blogs" },
+    { href: "/blog", label: "Blog" },
     { href: "/about", label: "About Me" },
   ];
 
@@ -17,6 +17,7 @@ export default function Navbar() {
         <Link href="/" className="text-2xl font-semibold">
           TheVillageHacker
         </Link>
+
         <div className="flex space-x-6">
           {links.map(({ href, label }) => (
             <Link
@@ -24,7 +25,7 @@ export default function Navbar() {
               href={href}
               className={`${
                 pathname === href ? "text-blue-600 font-medium" : "text-gray-700"
-              } hover:text-blue-500`}
+              } hover:text-blue-500 transition-colors`}
             >
               {label}
             </Link>
